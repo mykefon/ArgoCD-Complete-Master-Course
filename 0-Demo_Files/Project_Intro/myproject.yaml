@@ -6,9 +6,9 @@ metadata:
 spec:
   description: "My Argo CD Project"
   sourceRepos:
-  - "https://github.com/myusername/my-repo.git"
+  - "https://github.com/mykefon/ArgoCD-Complete-Master-Course.git"
   destinations:
-  - namespace: mynamespace
+  - namespace: default
     server: "https://kubernetes.default.svc"
   clusterResourceWhitelist:
   - group: '*'
