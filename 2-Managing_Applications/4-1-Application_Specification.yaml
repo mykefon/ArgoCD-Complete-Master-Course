@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: mykefon.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook
@@ -7,9 +7,9 @@ metadata:
   # Add this finalizer ONLY if you want these to cascade delete.
   finalizers:
     # The default behaviour is foreground cascading deletion
-    - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.mykefon.io
     # Alternatively, you can use background cascading deletion
-    # - resources-finalizer.argocd.argoproj.io/background
+    # - resources-finalizer.argocd.mykefon.io/background
   # Add labels to your application object.
   labels:
     name: guestbook
@@ -19,7 +19,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps.git  # Can point to either a Helm chart repo or a git repo.
+    repoURL: https://github.com/mykefon/argocd-example-apps.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
     path: guestbook  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
 
@@ -158,7 +158,7 @@ spec:
 
   # Sources field specifies the list of sources for the application
   sources:
-    - repoURL: https://github.com/argoproj/argocd-example-apps.git  # Can point to either a Helm chart repo or a git repo.
+    - repoURL: https://github.com/mykefon/argocd-example-apps.git  # Can point to either a Helm chart repo or a git repo.
       targetRevision: HEAD  # For Helm, this refers to the chart version.
       path: guestbook  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
       ref: my-repo  # For Helm, acts as a reference to this source for fetching values files from this source. Has no meaning when under `source` field
