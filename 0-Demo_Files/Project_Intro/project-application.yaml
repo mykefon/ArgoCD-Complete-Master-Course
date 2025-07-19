@@ -6,9 +6,9 @@ metadata:
 spec:
   project: myproject
   source:
-    repoURL: 'https://github.com/myusername/my-repo.git'
+    repoURL: 'https://github.com/mykefon/ArgoCD-Complete-Master-Course.git'
     path: path/to/app
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: mynamespace
+    namespace: default
